@@ -125,7 +125,7 @@ footer{
     }
     .box{
         width: 80%;
-        margin: 42% auto 38% auto;
+        margin: 45% auto 32% auto;
         padding: 10% 5% 2% 5%;
     }
     .btn {
@@ -150,6 +150,15 @@ footer{
     }
     #right{
         margin: 4% 5% 3% 0%;
+    }
+    footer{
+        display:block;
+        position:fixed;
+        left: 0;
+        bottom:0;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 2%;
     }
 }
 @media only screen and (min-width: 480px) and (max-width: 768px) {

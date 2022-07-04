@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="weather.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="box">
+        <h1>Weather Forecast</h1>
+        <form action="/" method="post">
+            <input type="text" name="cityname" id="cityname" placeholder="Enter City Name">
+            <br>
+            <button class="btn" type="submit">Check Weather</button>
+        </form>
+        <% if(status=="404"){%>
+            <div class="inbox_static">
+                <p id="intext">Please type correct city name</p>
+            </div>
+        <%}else if(query!=""){ %>
+            <div class="inbox">
+                <div id="left">
+                    <img src="<%= imgURL %>" alt="<%= weatherdescription %>">
+                </div>
+                <div id="right">
+                    <p><%= query %> </p>
+                    <p><%= temp %> °C </p>
+                    <p><%= weatherdescription %> </p>
+                </div>
+            </div>
+        <% } else{%>
+            <div class="inbox_static">
+                <p id="intext">Type City Name to get weather details</p>
+            </div>
+        <% } %>
+    </div>
+    <footer>
+        <p> All right reserved ©2022 || Rohit Ranjan</p>
+    </footer>
+</body>
+</html>

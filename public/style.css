@@ -5,7 +5,7 @@
 }
 
 body{
-    background-image: url(sky.jpg);
+    background-image: url(/img/sky.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -14,9 +14,9 @@ body{
 
 .box{
     text-align: center;
-    width: 35%;
-    margin: 5% auto;
-    padding: 3% 5%;
+    width: 50%;
+    margin: 2% auto;
+    padding: 2% 5%;
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
     background-color: rgba(255, 248, 245, 0.855);  
     backdrop-filter: blur(5px);
@@ -24,9 +24,9 @@ body{
 
 .inbox{
     text-align: center;
-    width: 100%;
+    width: 65%;
     margin: 8% auto 5% auto;
-    padding: 3% 5%;
+    padding: 3% 5% 1.5%;
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
     background: #3985b7;
     background: linear-gradient(103deg, #93b6db 0%, #88b5e4 100%);  
@@ -49,13 +49,13 @@ body{
 
 #left{
     float: left;
-    margin: 0% 0% 0% 12%;
+    /* margin: 0% 0% 0% 12%; */
 }
 
 #right{
     float: right;
     height: 10%;
-    margin: 4% 16% 3% 0%;
+    margin: 4% 10% 0% 0%;
     text-transform: capitalize;
 }
 
@@ -64,24 +64,25 @@ body{
     font-size: small;
 }
 
-
-h1{
-    margin-bottom: 2%;
+#Brand{
+    height: 30%;
+    width: 60%;
 }
 
 input[type=text] {
-    width: 100%;
+    width: 80%;
     padding: 12px 20px;
     margin: 5% 0;
     box-sizing: border-box;
+    border-radius: 0.4rem;
   }
-
 
 /* button */
 .btn {
-  margin: 10px auto;
-  padding: 15px 30px;
+  margin: 1% auto;
+  padding: 3% 5%;
   text-align: center;
+  font-size: 75%;
   text-transform: uppercase;
   transition: 0.5s;
   background-size: 200% auto;
@@ -110,9 +111,30 @@ input[type=text] {
 }
 /* button */
 
+.grid-container {
+    display: grid;
+    margin: 30px auto;
+    width: 500px;
+    gap: 30px 10px;
+    grid-template-columns: auto auto auto;
+}
+
+.grid-item {
+    padding: 12px 20px;
+}
+
+.icon {
+    width: 25px;
+    height: 25px;
+    color: black;
+    display: inline;
+    vertical-align: middle;
+}
+
 footer{
     color: rgb(20, 20, 20);
     text-align: center;
+    margin: 3% auto 1.5% auto;
 }
 
 
@@ -124,8 +146,8 @@ footer{
         background-size: cover;
     }
     .box{
-        width: 80%;
-        margin: 40% auto 35% auto;
+        width: 90%;
+        margin: 10% auto;
         padding: 10% 5% 2% 5%;
     }
     .btn {
@@ -135,21 +157,32 @@ footer{
         font-weight: 500;
     }
     .inbox{
+        width: 85%;
         margin: 15% auto 15% auto;
-        padding: 8% 5%;
+        padding: 5% 5% 3%;
     }
     .inbox_static{
         margin: 8% auto 15% auto;
         padding: 12% 5%;
     }
-    #left{
-        width: 50px;
-        height: 20px;
+    #left img{
+        width: 90%;
+        height: 75%;
         object-fit:cover;
-        margin: 0% 0% 0% 2%;
     }
     #right{
-        margin: 4% 5% 3% 0%;
+        margin: 4% 5% 0% 0%;
+    }
+
+    .grid-container {
+        margin: 30px auto;
+        width: 320px;
+        gap: 20px 5px;
+        grid-template-columns: auto auto;
+    }
+
+    .grid-item {
+        padding: 12px 10px 12px 0px;
     }
 }
 /* ------Responsive------- */

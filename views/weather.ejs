@@ -1,24 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather Forecast</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="weather.ico" type="image/x-icon">
-</head>
-<body>
+<%- include('header') -%>
+
     <div class="box">
-        <h1>Weather Forecast</h1>
-        <form action="/" method="post">
-            <input type="text" name="cityname" id="cityname" placeholder="Enter City Name">
-            <br>
-            <button class="btn" type="submit">Check Weather</button>
-        </form>
+        <img src="/img/Brand.png" alt="Brand" id="Brand">
+        <div>
+            <form action="/" method="post">
+                <input type="text" name="cityname" id="cityname" placeholder="Enter City Name">
+                <br>
+                <button class="btn" type="submit">Check Weather</button>
+            </form>
+        </div>
         <% if(status=="404"){%>
             <div class="inbox_static">
                 <p id="intext">Please type correct city name</p>
@@ -35,14 +25,55 @@
                     <% query="";%>
                 </div>
             </div>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <img class="icon" id="mn" src="/img/mint.png" alt="">
+                    <span>Min Temp</span>
+                    <p class="desc">
+                        <%= mint %>
+                    </p>
+                </div>
+                <div class="grid-item">
+                    <img class="icon" id="mx" src="/img/maxt.png" alt="">
+                    <span>Max Temp</span>
+                    <p class="desc">
+                        <%= maxt %>
+                    </p>
+                </div>
+                <div class="grid-item">
+                    <img class="icon" src="/img/fl.png" alt="">
+                    <span>Feels Like</span>
+                    <p class="desc">
+                        <%= flike %>
+                    </p>
+                </div>
+                <div class="grid-item">
+                    <img class="icon" id="press" src="/img/press.png" alt="">
+                    <span>Pressure</span>
+                    <p class="desc">
+                        <%= press %>
+                    </p>
+                </div>
+                <div class="grid-item">
+                    <img class="icon" src="/img/hum.png" alt="">
+                    <span>Humidity</span>
+                    <p class="desc">
+                        <%= hum %>
+                    </p>
+                </div>
+                <div class="grid-item">
+                    <img class="icon" src="/img/wind.png" alt="">
+                    <span>Wind Speed</span>
+                    <p class="desc">
+                        <%= wspeed %>
+                    </p>
+                </div>
+            </div>
         <% } else{%>
             <div class="inbox_static">
                 <p id="intext">Type City Name to get weather details</p>
             </div>
         <% } %>
     </div>
-    <footer>
-        <p> All right reserved ©2022 || Rohit Ranjan</p>
-    </footer>
-</body>
-</html>
+
+    <%- include('footer') -%>
